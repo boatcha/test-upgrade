@@ -1,0 +1,14 @@
+---
+
+- hosts: all
+  become: yes
+  # become_user: hkg+asrisitticha-hkg
+
+ #   ansible_become_pass: input user password
+
+  tasks:
+        - name : Install tree
+          yum:
+             name : tree
+           #  update_cache : true
+             state : present
